@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>Appear_Table</title>
+    <link rel="stylsheet" href="appear_table.css">
+</head>
+
+<body style="background-color:rgb(148, 148, 206)">
+    <h3>List of Potus: </h3>
+    <p id="demo" style="display:none">
+
+    </p>
+    <!-- <table id="potus" style="display:none">
+                <tr>
+                    <th>Years Served</th>
+                    <th>Name</th>
+                    <th>No of Terms</th>
+                    <th>Gender</th>
+                </tr>
+
+                <tr>
+                    <td>1993-2001</td>
+                    <td>Bill Clinton</td>
+                    <td>2</td>
+                    <td>Male</td>
+                </tr>
+
+                <tr>
+                    <td>2001-2009</td>
+                    <td>George Bush</td>
+                    <td>1</td>
+                    <td>Male</td>
+                </tr>
+
+                <tr>
+                    <td>2009-2017</td>
+                    <td>Obama</td>
+                    <td>2</td>
+                    <td>Male</td>
+                </tr>
+
+                <tr>
+                    <td>2017-2021</td>
+                    <td>Donald Trump</td>
+                    <td>1</td>
+                    <td>Male</td>
+                </tr>
+
+                <tr>
+                    <td>2021-...</td>
+                    <td>Joe Biden</td>
+                    <td>Incumbent</td>
+                    <td>Male</td>
+                </tr>
+        </table> -->
+
+
+
+    <!-- <button onclick='document.getElementById("potus").style.display="block"'>Click Here to show:</button>
+        <button onclick='document.getElementById("potus").style.display="none"'>Click Here to hide:</button> -->
+
+    <script>
+        const list_potus = ["Bill Clinton", "George Bush", "Barrack Obama", "Donald Trump", "Joe Biden"];
+        let potuslength = list_potus.length;
+        let txt = "";
+        txt = "<table style='border:2px solid black; border-collapse:collapse;'>";
+        txt += "<tbody>";
+        // list_potus.forEach(myFunc);
+        let incr = 0;
+        for (let k = 0; k < potuslength; k++, incr++) {
+            myFunc(list_potus[k], incr);
+        }
+        document.getElementById("demo").innerHTML = txt;
+        function myFunc(value, i) {
+            // for(let i=0;i<potuslength;i++)
+            //  {
+            txt += "<tr style='border:2px solid black; border-collapse:collapse;'>";
+            txt += "<td style='border:2px solid black; border-collapse:collapse;'>";
+            txt += i + 1;
+            txt += "</td>";
+
+            txt += "<td>";
+            txt += list_potus[i];
+            txt += "</td>";
+            txt += "</tr>";
+
+            //  }
+
+        }
+        txt += "</tbody>";
+        txt += "</table>";
+        
+
+        // let res=prompt("Enter your name please..:");
+        // alert("Hi,so you are "+res);
+    </script>
+
+    <button onclick='document.getElementById("demo").style.display="block"'>Click Here to show:</button>
+    <button onclick='document.getElementById("demo").style.display="none"'>Click Here to hide:</button>
+</body>
+
+</html>
